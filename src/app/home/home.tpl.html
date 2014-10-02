@@ -1,0 +1,30 @@
+<div class="body">
+  <h1>Ruter demo</h1>
+
+  <p class="lead">
+    Station info
+  </p>
+
+
+<div ng-controller="myBusStopCtrl" class="table-responsive" style="max-width:800px;">
+Time: {{timeInMs}}
+    <table class="table table-striped" ng-show="realTimeData.length>0">
+        <thead>
+            <tr class="info">
+            <th>Train#</th>
+            <th>Destination</th>
+            <th>Wait time</th>          
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in realTimeData">
+                <td>{{item.LineRef}}</td>
+                <td>{{item.DestinationName}}</td>
+                <td>{{item.ExpectedArrivalTime | fromNow }}</td>            
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
