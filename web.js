@@ -1,10 +1,7 @@
-var express = require("express");
+var gzippo = require('gzippo');
+var express = require('express');
 var app = express();
-app.use(express.logger());
-
-app.use('/', express.static('build/'));
-
-var port = process.env.PORT || 5000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+ 
+app.use(express.logger('dev'));
+app.use(gzippo.staticGzip("" + __dirname + "/bin"));
+app.listen(process.env.PORT || 5000);
