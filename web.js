@@ -5,7 +5,7 @@ var app = express();
 
 app.use(logfmt.requestLogger());
 
-app.use('/', express.static('bin/'));
+app.use('/', express.static('build/'));
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
