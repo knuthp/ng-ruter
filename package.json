@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "express": "^4.9.5",
-    "gzippo": "^0.2.0"
+    "gzippo": "^0.2.0",
+    "logfmt": "^1.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -36,5 +37,8 @@
     "grunt-karma": "^0.8.2",
     "karma-coffee-preprocessor": "^0.2.1",
     "karma": "^0.12.9"
+  },  
+  "engines": {
+    "node": "0.10.x"
   }
 }
