@@ -563,8 +563,10 @@ module.exports = function ( grunt ) {
    * minifying your code.
    */
   grunt.registerTask( 'compile', [
-    'less:compile', 'copy:compile_assets', 'ngmin', 'concat:compile_js', 'uglify', 'index:compile'
+//    'less:compile', 'copy:compile_assets', 'ngmin', 'concat:compile_js', 'uglify', 'index:compile'
+    'less:compile', 'copy:compile_assets',  'concat:compile_js', 'index:compile'
   ]);
+
 
   /**
    * A utility function to get all app JavaScript sources.
