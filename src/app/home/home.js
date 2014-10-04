@@ -45,7 +45,7 @@ angular.module( 'ngRuter.home', [
     return function(isoInterval) {
       var delay = moment.duration(isoInterval);
       if (delay.asSeconds() === 0) {
-        return "On time";
+        return "on time";
       } else {
         return delay.humanize();
       }
@@ -74,14 +74,25 @@ angular.module( 'ngRuter.home', [
  */
 .controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout ) {
   $scope.realTimeData = [{name : "a"}, {name:"b"}];
-  $scope.currentStation = {name : "Lysaker[tog]", id : "3012550"};
+  $scope.stations = [
+    {id : "3012550", name : "Lysaker [tog]"},
+    {id : "2200500", name : "Asker [tog]"},
+    {id : "1250100", name : "Mysen [tog]"},
+    {id : "6049104", name : "Kongsberg [tog]"}
+  ];
+  $scope.currentStation = $scope.stations[0];
+
+  $scope.changeStation = function() {
+    $scope.realTimeData = [];
+    $scope.getRealTimeData();
+  };
 
 
   getStationUrl = function(id) {
     return "http://reis.trafikanten.no/reisrest/realtime/getrealtimedata/" + id + "?callback=JSON_CALLBACK";
   };
 
-  getRealTimeData = function() {
+  $scope.getRealTimeData =  function () {
     $http.jsonp(getStationUrl($scope.currentStation.id))
           .success(function(data){
               $scope.realTimeData = data;
@@ -90,14 +101,14 @@ angular.module( 'ngRuter.home', [
   $scope.timeInMs = 1;
 
   var interval = 5000;
-  var countUp = function() {
-          getRealTimeData();
+  function countUp() {
+          $scope.getRealTimeData();
           $scope.timeInMs+= interval;
           $timeout(countUp, interval);
-  };
+  }
 
   $timeout(countUp, interval);
-  getRealTimeData();
+  $scope.getRealTimeData();
 
 })
 
