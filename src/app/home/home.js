@@ -54,7 +54,7 @@ angular.module( 'ngRuter.home', [
 
  .filter('deviations', function() {
     return function(deviations) {
-      if (deviations.length > 0) {
+      if (deviations != null && deviations.length > 0) {
         return deviations.length;
       } else {
         return "";
