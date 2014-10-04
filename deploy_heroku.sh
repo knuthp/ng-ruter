@@ -1,4 +1,5 @@
 #!/bin/sh 
+# http://www.shanestillwell.com/2014/04/22/deploy-web-app-with-grunt-compiled-assets-to-heroku/
 
 git checkout bin
 git rebase master
