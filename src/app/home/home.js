@@ -39,7 +39,28 @@ angular.module( 'ngRuter.home', [
             //moment.lang('nb'); 
             return moment(dateString).fromNow();
         };
+ })
+
+ .filter('isoInterval', function() {
+    return function(isoInterval) {
+      var delay = moment.duration(isoInterval);
+      if (delay.asSeconds() === 0) {
+        return "On time";
+      } else {
+        return delay.humanize();
+      }
+    };
  }) 
+
+ .filter('deviations', function() {
+    return function(deviations) {
+      if (deviations.length > 0) {
+        return deviations.length;
+      } else {
+        return "";
+      }
+    };
+ })
 
 /**
  * And of course we define a controller for our route.
@@ -47,14 +68,21 @@ angular.module( 'ngRuter.home', [
 .controller( 'HomeCtrl', function HomeController( $scope, $http ) {
 })
 
+
+/**
+ * Controller for real time info.
+ */
 .controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout ) {
   $scope.realTimeData = [{name : "a"}, {name:"b"}];
+  $scope.currentStation = {name : "Lysaker[tog]", id : "3012550"};
 
-  var url = "http://reis.trafikanten.no/reisrest/realtime/getrealtimedata/3012550" + "?callback=JSON_CALLBACK";
+
+  getStationUrl = function(id) {
+    return "http://reis.trafikanten.no/reisrest/realtime/getrealtimedata/" + id + "?callback=JSON_CALLBACK";
+  };
 
   getRealTimeData = function() {
-    console.log("aa");
-    $http.jsonp(url)
+    $http.jsonp(getStationUrl($scope.currentStation.id))
           .success(function(data){
               $scope.realTimeData = data;
           });
