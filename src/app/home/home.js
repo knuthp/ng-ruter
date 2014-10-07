@@ -52,6 +52,27 @@ angular.module( 'ngRuter.home', [
     };
  }) 
 
+ .filter('hourMinutesSeconds', function() {
+    return function(date) {
+      if (date) {
+        return moment(date).format("HH:mm:ss");
+      } else {
+        return "";
+      }
+    };
+ })
+
+ .filter('hourMinutes', function() {
+    return function(date) {
+      if (date) {
+        return moment(date).format("HH:mm");
+      } else {
+        return "";
+      }
+    };
+ })
+
+
  .filter('deviations', function() {
     return function(deviations) {
       if (deviations != null && deviations.length > 0) {
@@ -88,6 +109,8 @@ angular.module( 'ngRuter.home', [
   };
 
 
+  $scope.updateTime = null;
+
   getStationUrl = function(id) {
     return "http://reis.trafikanten.no/reisrest/realtime/getrealtimedata/" + id + "?callback=JSON_CALLBACK";
   };
@@ -96,14 +119,13 @@ angular.module( 'ngRuter.home', [
     $http.jsonp(getStationUrl($scope.currentStation.id))
           .success(function(data){
               $scope.realTimeData = data;
+              $scope.updateTime = new Date();
           });
   };
-  $scope.timeInMs = 1;
 
   var interval = 5000;
   function countUp() {
           $scope.getRealTimeData();
-          $scope.timeInMs+= interval;
           $timeout(countUp, interval);
   }
 

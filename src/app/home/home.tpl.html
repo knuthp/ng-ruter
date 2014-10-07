@@ -8,11 +8,12 @@
     Station info: {{currentStation.name}}
   </p>
   <select ng-model="currentStation" ng-options="station.name for station in stations" ng-change="getRealTimeData()"></select><br>
-Time: {{timeInMs}}
+UpdateTime: {{updateTime | hourMinutesSeconds}}
     <table class="table table-striped" ng-show="realTimeData.length>0">
         <thead>
             <tr class="info">
             <th>Train#</th>
+            <th>Scheduled</th>
             <th>Destination</th>
             <th>Departure</th> 
             <th>Delay</th>
@@ -22,6 +23,7 @@ Time: {{timeInMs}}
         <tbody>
             <tr ng-repeat="item in realTimeData">
                 <td>{{item.PublishedLineName}}</td>
+                <td>{{item.AimedDepartureTime | hourMinutes}}</td>
                 <td>{{item.DestinationName}}</td>
                 <td>{{item.ExpectedDepartureTime | fromNow }}</td>            
                 <td>{{item.Delay | isoInterval}}</td>

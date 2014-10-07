@@ -1,6 +1,5 @@
 angular.module( 'ngRuter.about', [
   'ui.router',
-  'placeholders',
   'ui.bootstrap'
 ])
 
