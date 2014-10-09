@@ -1,37 +1,40 @@
 <div class="body">
-  <h1>Ruter demo</h1>
-
-
-
-<div ng-controller="myBusStopCtrl" class="table-responsive" style="max-width:800px;">
-  <p class="lead">
-    Station info: {{currentStation.name}}
-  </p>
-  <select ng-model="currentStation" ng-options="station.name for station in stations" ng-change="getRealTimeData()"></select><br>
-UpdateTime: {{updateTime | hourMinutesSeconds}}
-    <table class="table table-striped" ng-show="realTimeData.length>0">
-        <thead>
-            <tr class="info">
-            <th>Train#</th>
-            <th>Scheduled</th>
-            <th>Destination</th>
-            <th>Departure</th> 
-            <th>Delay</th>
-            <th>Deviation</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="item in realTimeData">
-                <td>{{item.PublishedLineName}}</td>
-                <td>{{item.AimedDepartureTime | hourMinutes}}</td>
-                <td>{{item.DestinationName}}</td>
-                <td>{{item.ExpectedDepartureTime | fromNow }}</td>            
-                <td>{{item.Delay | isoInterval}}</td>
-                <td>{{item.Extensions.Deviations | deviations}}</td>
-            </tr>
-        </tbody>
-    </table>
-
+    <div ng-controller="myBusStopCtrl" class="table-responsive" style="max-width:800px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Station info: <select ng-model="currentStation" ng-options="station.name for station in stations" ng-change="getRealTimeData()"></select></h2> 
+                
+            </div>
+            <div class="panel-body table-responsive">
+                UpdateTime: {{updateTime | hourMinutesSeconds}}
+            </div>
+            <table class="table table-striped" ng-show="realTimeData.length > 0">
+                <thead>
+                    <tr class="info">
+                        <th></th>
+                        <th>Train#</th>
+                        <th>Scheduled</th>
+                        <th>Destination</th>
+                        <th>Departure</th> 
+                        <th>Delay</th>
+                        <th>Deviation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div >
+                        <tr ng-repeat="item in realTimeData" ng-class="getRowClass(item)">
+                            <th><span class="label label-default" ng-class="getRowClassBadge(item)">Train</span></th>
+                            <td>{{item.PublishedLineName}}</td>
+                            <td>{{item.AimedDepartureTime | hourMinutes}}</td>
+                            <td>{{item.DestinationName}}</td>
+                            <td>{{item.ExpectedDepartureTime | fromNow }} ({{item.ExpectedDepartureTime | hourMinutesSeconds}})</td>            
+                            <td>{{item.Delay | isoInterval}}</td>
+                            <td>{{item.Extensions.Deviations | deviations}}</td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-
 

@@ -94,7 +94,7 @@ angular.module( 'ngRuter.home', [
  * Controller for real time info.
  */
 .controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout ) {
-  $scope.realTimeData = [{name : "a"}, {name:"b"}];
+  $scope.realTimeData = [];
   $scope.stations = [
     {id : "3012550", name : "Lysaker [tog]"},
     {id : "2200500", name : "Asker [tog]"},
@@ -102,6 +102,10 @@ angular.module( 'ngRuter.home', [
     {id : "6049104", name : "Kongsberg [tog]"}
   ];
   $scope.currentStation = $scope.stations[0];
+
+$scope.toggled = function(open) {
+    console.log('Dropdown is now: ', open);
+  };
 
   $scope.changeStation = function() {
     $scope.realTimeData = [];
@@ -113,6 +117,22 @@ angular.module( 'ngRuter.home', [
 
   getStationUrl = function(id) {
     return "http://reis.trafikanten.no/reisrest/realtime/getrealtimedata/" + id + "?callback=JSON_CALLBACK";
+  };
+
+  $scope.getRowClass = function(item) {
+    var delay = moment.duration(item.Delay);
+    if (delay.asMinutes() < 2) {
+      return "success";  
+    } else if (delay.asMinutes() < 5) {
+      return "warning";
+    } else {
+      return "danger";
+    }
+  };
+
+
+  $scope.getRowClassBadge = function(item) {
+    return "label-" + $scope.getRowClass(item);
   };
 
   $scope.getRealTimeData =  function () {
