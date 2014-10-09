@@ -18,20 +18,20 @@
                         <th>Departure</th> 
                         <th>Delay</th>
                         <th>Deviation</th>
-                        <th>DepartureBoardingActivity</th>
+                        <th>Type</th>
                     </tr>
                 </thead>
                 <tbody>
                     <div >
                         <tr ng-repeat="item in realTimeData" ng-class="getRowClass(item)">
-                            <th><span class="label label-default" ng-class="getRowClassBadge(item)">Train</span></th>
+                            <th><span class="label label-default" ng-class="getRowClassBadge(item)">{{item.stopType}}</span></th>
                             <td>{{item.PublishedLineName}}</td>
                             <td>{{item.AimedDepartureTime | hourMinutes}}</td>
                             <td>{{item.DestinationName}}</td>
                             <td>{{item.ExpectedDepartureTime | fromNow }} ({{item.ExpectedDepartureTime | hourMinutesSeconds}})</td>            
                             <td>{{item.Delay | isoInterval}}</td>
                             <td>{{item.Extensions.Deviations | deviations}}</td>
-                            <td>{{item.DepartureBoardingActivity}}
+                            <td>{{item.stopType}}
                         </tr>
                     </div>
                 </tbody>

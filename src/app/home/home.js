@@ -96,12 +96,12 @@ angular.module( 'ngRuter.home', [
 .controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout ) {
   $scope.realTimeData = [];
   $scope.stations = [
-    {id : "3012550", name : "Lysaker [tog]"},
-    {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)"},
-    {id : "3012552", name : "Lysaker stasjon (sydside Dr.vn)"},
-    {id : "2200500", name : "Asker [tog]"},
-    {id : "1250100", name : "Mysen [tog]"},
-    {id : "6049104", name : "Kongsberg [tog]"}
+    {id : "3012550", name : "Lysaker [tog]", stopType : "Train"},
+    {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)", stopType : "Bus"},
+    {id : "3012552", name : "Lysaker stasjon (sydside Dr.vn)", stopType : "Bus"},
+    {id : "2200500", name : "Asker [tog]", stopType : "Train"},
+    {id : "1250100", name : "Mysen [tog]", stopType : "Train"},
+    {id : "6049104", name : "Kongsberg [tog]", stopType : "Train"}
   ];
   $scope.currentStation = $scope.stations[0];
 
@@ -140,6 +140,9 @@ $scope.toggled = function(open) {
   $scope.getRealTimeData =  function () {
     $http.jsonp(getStationUrl($scope.currentStation.id))
           .success(function(data){
+              _.each(data, function(element, index, list) {
+                element.stopType = $scope.currentStation.stopType;
+              });
               $scope.realTimeData = data;
               $scope.updateTime = new Date();
           });
