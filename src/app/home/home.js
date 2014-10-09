@@ -97,6 +97,8 @@ angular.module( 'ngRuter.home', [
   $scope.realTimeData = [];
   $scope.stations = [
     {id : "3012550", name : "Lysaker [tog]"},
+    {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)"},
+    {id : "3012552", name : "Lysaker stasjon (sydside Dr.vn)"},
     {id : "2200500", name : "Asker [tog]"},
     {id : "1250100", name : "Mysen [tog]"},
     {id : "6049104", name : "Kongsberg [tog]"}

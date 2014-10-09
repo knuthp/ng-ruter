@@ -18,6 +18,7 @@
                         <th>Departure</th> 
                         <th>Delay</th>
                         <th>Deviation</th>
+                        <th>DepartureBoardingActivity</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +31,7 @@
                             <td>{{item.ExpectedDepartureTime | fromNow }} ({{item.ExpectedDepartureTime | hourMinutesSeconds}})</td>            
                             <td>{{item.Delay | isoInterval}}</td>
                             <td>{{item.Extensions.Deviations | deviations}}</td>
+                            <td>{{item.DepartureBoardingActivity}}
                         </tr>
                     </div>
                 </tbody>
