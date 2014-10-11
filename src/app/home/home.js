@@ -159,11 +159,20 @@ $scope.toggled = function(open) {
 
   $scope.getDeviationsSymbol = function(item) {
     if (item.Extensions != null && item.Extensions.Deviations != null && item.Extensions.Deviations.length > 0) {
-    //   console.log(item.Delay);
-      return "fa fa-warning";
+      return "fa fa-info";
     } else {
-       return "";
+       return false;
     }
+  };
+
+  $scope.getDevitationsText = function(item) {
+    retText = "";
+    if (item.Extensions != null && item.Extensions.Deviations != null && item.Extensions.Deviations.length > 0) {
+      _.each(item.Extensions.Deviations, function(element, index, list) {
+        retText += element.Header;
+      });
+    }
+    return retText;
   };
 
 })
