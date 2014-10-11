@@ -100,8 +100,7 @@ angular.module( 'ngRuter.home', [
     {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)", stopType : "Bus"},
     {id : "3012552", name : "Lysaker stasjon (sydside Dr.vn)", stopType : "Bus"},
     {id : "2200500", name : "Asker [tog]", stopType : "Train"},
-    {id : "1250100", name : "Mysen [tog]", stopType : "Train"},
-    {id : "6049104", name : "Kongsberg [tog]", stopType : "Train"}
+    {id : "2200440", name : "Aspelund", stopType : "Bus"} 
   ];
   $scope.currentStation = $scope.stations[0];
 
@@ -156,6 +155,16 @@ $scope.toggled = function(open) {
 
   $timeout(countUp, interval);
   $scope.getRealTimeData();
+
+
+  $scope.getDeviationsSymbol = function(item) {
+    if (item.Extensions != null && item.Extensions.Deviations != null && item.Extensions.Deviations.length > 0) {
+    //   console.log(item.Delay);
+      return "fa fa-warning";
+    } else {
+       return "";
+    }
+  };
 
 })
 

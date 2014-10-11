@@ -12,13 +12,12 @@
                 <thead>
                     <tr class="info">
                         <th></th>
-                        <th>Train#</th>
+                        <th>Line#</th>
                         <th>Scheduled</th>
                         <th>Destination</th>
                         <th>Departure</th> 
                         <th>Delay</th>
-                        <th>Deviation</th>
-                        <th>Type</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,8 +29,7 @@
                             <td>{{item.DestinationName}}</td>
                             <td>{{item.ExpectedDepartureTime | fromNow }} ({{item.ExpectedDepartureTime | hourMinutesSeconds}})</td>            
                             <td>{{item.Delay | isoInterval}}</td>
-                            <td>{{item.Extensions.Deviations | deviations}}</td>
-                            <td>{{item.stopType}}
+                            <td><span ng-class="getDeviationsSymbol(item)"></span></td>
                         </tr>
                     </div>
                 </tbody>
