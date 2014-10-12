@@ -39,22 +39,62 @@ angular.module( 'ngRuter.road', [
  * And of course we define a controller for our route.
  */
 .controller( 'RoadCtrl', function RoadController( $scope, $http ) {
-  $scope.strekninger = [
-    {id : 100098,  beskrivelse : "Asker - Holmen"},
-    {id : 100159,  beskrivelse : "Holmen - Sandvika"},
-    {id : 100160,  beskrivelse : "Sandvika - Lysaker vest"}
+  var delayEnum = ["MANGLER", "STOR", "LITEN", "INGEN"];
+  var trendEnum = ["OKENDE", "AVTAGENDE", "STABIL"];
+  $scope.paths = [
+    {name: "Asker - Lysaker", edges : [{id : 100098}, {id : 100159}, {id : 100160}]}
   ];
 
-  $scope.getRealTimeForId = function(id) {
+  $scope.getRealTimeForEdgeId = function(id) {
     return _.find($scope.realTimeData.reisetid, function(elem) {
       return elem.strekningid == id;
     }); 
   };
 
-  $scope.getLegInfoForId = function(id) {
-    return _.find($scope.legs.strekning, function(elem) {
+  $scope.getInfoForEdgeId = function(id) {
+    return _.find($scope.edges.strekning, function(elem) {
       return elem.id == id;
     }); 
+  };
+
+  $scope.getDelayForPath = function(path) {
+    var ret = delayEnum.length;
+    if ($scope.realTimeData.reisetid) {
+      _.each(path.edges, function(elem, index, list) {
+        ret = Math.min(ret, delayEnum.indexOf($scope.getRealTimeForEdgeId(elem.id).forsinkelse));
+      });
+    }
+    return delayEnum[ret];
+  };
+
+  $scope.getTrendForPath = function(path) {
+    var ret = trendEnum.length;
+    if ($scope.realTimeData.reisetid) {
+      _.each(path.edges, function(elem, index, list) {
+        ret = Math.min(ret, trendEnum.indexOf($scope.getRealTimeForEdgeId(elem.id).tendens));
+      });
+    }
+    return trendEnum[ret];
+  };
+
+  $scope.getNormalTravelTimeForPath = function(path) {
+    var ret = 0;
+    if ($scope.edges && $scope.edges.strekning.length > 0) {
+      _.each(path.edges, function(elem, index, list) {
+        ret += $scope.getInfoForEdgeId(elem.id).normalreisetid;
+      });
+    }
+    return ret;
+  };
+
+  $scope.getRealTimeTravelTimeForPath = function(path) {
+    var ret = 0;
+    if ($scope.realTimeData.reisetid) {
+      _.each(path.edges, function(elem, index, list) {
+        ret += $scope.getRealTimeForEdgeId(elem.id).tid;
+      });
+    }
+    return ret;
   };
 
 
@@ -66,16 +106,16 @@ angular.module( 'ngRuter.road', [
       });
   };
 
-  $scope.legs = [];
-  $scope.getLegs = function() {
+  $scope.edges = [];
+  $scope.getEdges = function() {
     $http.get("http://rest-translator.herokuapp.com/reisetider/strekninger")
       .success(function(data){
-        $scope.legs = data.reisetider;
+        $scope.edges = data.reisetider;
       });    
   };
 
   $scope.getRealTimeData();
-  $scope.getLegs();
+  $scope.getEdges();
 })
 
 ; 

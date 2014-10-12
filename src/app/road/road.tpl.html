@@ -3,7 +3,11 @@
     Intervall : {{realTimeData.intervall.start}} - {{realTimeData.intervall.slutt}}
 
     <ul>
-        <li ng-repeat="strekning in strekninger">{{strekning.beskrivelse}} ({{strekning.id}}): {{getRealTimeForId(strekning.id)}} {{getLegInfoForId(strekning.id)}}</li>
+        <li ng-repeat="path in paths">{{path.name}} {{getNormalTravelTimeForPath(path)}} min RT: {{getDelayForPath(path)}} {{getTrendForPath(path)}} {{getRealTimeTravelTimeForPath(path)}} min 
+            <ul>
+                <li ng-repeat="edge in path.edges">{{getInfoForEdgeId(edge.id).beskrivelse}} : {{getInfoForEdgeId(edge.id).normalreisetid}} min RT: {{getRealTimeForEdgeId(edge.id).forsinkelse}} {{getRealTimeForEdgeId(edge.id).tendens}}  {{getRealTimeForEdgeId(edge.id).tid}}</li>
+            </ul>
+        </li>
     </ul>
 
 

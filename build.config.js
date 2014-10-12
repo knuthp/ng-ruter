@@ -72,6 +72,7 @@ module.exports = {
 
     ],
     css: [
+      'vendor/bootstrap/f'
     ],
     assets: [
     ]
