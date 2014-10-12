@@ -2,6 +2,7 @@ angular.module( 'ngRuter', [
   'templates-app',
   'templates-common',
   'ngRuter.home',
+  'ngRuter.road',
   'ngRuter.about',
   'ui.router'
 ])

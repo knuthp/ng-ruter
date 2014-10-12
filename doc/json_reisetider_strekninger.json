@@ -1,0 +1,827 @@
+{
+  "reisetider": {
+    "xmlns": "http://www.reisetider.no",
+    "xmlns:gml": "http://www.opengis.net/gml",
+    "modelldato": "2014.07.08T00:00:00",
+    "strekning": [
+      {
+        "normalreisetid": 12,
+        "id": 100193,
+        "lengde": 13974,
+        "beskrivelse": "Tangenkrysset (55) - DÃ¸rdal"
+      },
+      {
+        "normalreisetid": 12,
+        "id": 100192,
+        "lengde": 13974,
+        "beskrivelse": "DÃ¸rdal - Tangenkrysset (55)"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100195,
+        "lengde": 7552,
+        "beskrivelse": "HaukÃ¥s - Hordviktunnelen"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100194,
+        "lengde": 7552,
+        "beskrivelse": "Hordviktunnelen - HaukÃ¥s"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100197,
+        "lengde": 7236,
+        "beskrivelse": "Knarvik - Hordviktunnelen"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100196,
+        "lengde": 7236,
+        "beskrivelse": "Hordviktunnelen - Knarvik"
+      },
+      {
+        "normalreisetid": 12,
+        "id": 100199,
+        "lengde": 19508,
+        "beskrivelse": "Drammen syd - Heiakrysset (21)"
+      },
+      {
+        "normalreisetid": 12,
+        "id": 100198,
+        "lengde": 19508,
+        "beskrivelse": "Heiakrysset (21) - Drammen syd"
+      },
+      {
+        "normalreisetid": 9,
+        "id": 100203,
+        "lengde": 11094,
+        "beskrivelse": "Fiskevollbukta - Tusenfryd"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100202,
+        "lengde": 6944,
+        "beskrivelse": "BjÃ¸rvika - Fiskevollbukta"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100205,
+        "lengde": 6944,
+        "beskrivelse": "Fiskevollbukta - BjÃ¸rvika"
+      },
+      {
+        "normalreisetid": 9,
+        "id": 100204,
+        "lengde": 11094,
+        "beskrivelse": "Tusenfryd - Fiskevollbukta"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100208,
+        "lengde": 2798,
+        "beskrivelse": "Okstadbakken - Sluppen"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100209,
+        "lengde": 2606,
+        "beskrivelse": "Sluppen - Okstadbakken"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100214,
+        "lengde": 5305,
+        "beskrivelse": "Ranheim - Buran"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100215,
+        "lengde": 5305,
+        "beskrivelse": "Buran - Ranheim"
+      },
+      {
+        "normalreisetid": 1,
+        "id": 100216,
+        "lengde": 810,
+        "beskrivelse": "Buran - Nonnegata"
+      },
+      {
+        "normalreisetid": 1,
+        "id": 100221,
+        "lengde": 810,
+        "beskrivelse": "Nonnegata - Buran"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100222,
+        "lengde": 4831,
+        "beskrivelse": "Moholt - Haakon VIIs gate"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100223,
+        "lengde": 4831,
+        "beskrivelse": "Haakon VIIs gate - Moholt"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100163,
+        "lengde": 3717,
+        "beskrivelse": "Loddefjord - Sandeide"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100162,
+        "lengde": 4991,
+        "beskrivelse": "Sandvika - Holmen"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100161,
+        "lengde": 4061,
+        "beskrivelse": "Lysaker vest - Sandvika"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100160,
+        "lengde": 4061,
+        "beskrivelse": "Sandvika - Lysaker vest"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100167,
+        "lengde": 8949,
+        "beskrivelse": "Bogafjell - Forus"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100166,
+        "lengde": 5159,
+        "beskrivelse": "Birkelandskrysset - Sandeide"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100165,
+        "lengde": 5254,
+        "beskrivelse": "Sandeide - Birkelandskrysset"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100164,
+        "lengde": 3717,
+        "beskrivelse": "Sandeide - Loddefjord"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100171,
+        "lengde": 2591,
+        "beskrivelse": "Grefsen - Teisen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100170,
+        "lengde": 2591,
+        "beskrivelse": "Teisen - Grefsen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100169,
+        "lengde": 4240,
+        "beskrivelse": "Ryen - Teisen"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100168,
+        "lengde": 8949,
+        "beskrivelse": "Forus - Bogafjell"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100173,
+        "lengde": 3208,
+        "beskrivelse": "Harafjelltunnelen Ã¸st - Knarrevik, Sotra bro vest"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100172,
+        "lengde": 4240,
+        "beskrivelse": "Teisen - Ryen"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100178,
+        "lengde": 11251,
+        "beskrivelse": "Karihaugen - Skedsmovollen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100176,
+        "lengde": 3208,
+        "beskrivelse": "Knarrevik, Sotra bro vest - Harafjelltunnelen Ã¸st"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100177,
+        "lengde": 6879,
+        "beskrivelse": "Helsfyr - Karihaugen"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100182,
+        "lengde": 4470,
+        "beskrivelse": "Tjensvoll - AuglendshÃ¸yden"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100183,
+        "lengde": 5465,
+        "beskrivelse": "Tjensvoll - Dusavik"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100181,
+        "lengde": 4470,
+        "beskrivelse": "AuglendshÃ¸yden - Tjensvoll"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100186,
+        "lengde": 7720,
+        "beskrivelse": "Glasskartunnelen - FlÃ¸yfjelltunnelen"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100187,
+        "lengde": 7980,
+        "beskrivelse": "GaupÃ¥s - Glasskartunnelen"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100184,
+        "lengde": 5465,
+        "beskrivelse": "Dusavik - Tjensvoll"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100185,
+        "lengde": 6937,
+        "beskrivelse": "Arna nord - GaupÃ¥s"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100188,
+        "lengde": 6146,
+        "beskrivelse": "Asker - Heiakrysset (21)"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100189,
+        "lengde": 6146,
+        "beskrivelse": "Heiakrysset (21) - Asker"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100133,
+        "lengde": 1608,
+        "beskrivelse": "NygÃ¥rdstunnelen - Danmarksplass"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100132,
+        "lengde": 1652,
+        "beskrivelse": "NygÃ¥rdstunnelen - FlÃ¸yfjelltunnelen"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100135,
+        "lengde": 5214,
+        "beskrivelse": "Moholt - Ranheim"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100134,
+        "lengde": 1608,
+        "beskrivelse": "Danmarksplass - NygÃ¥rdstunnelen"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100129,
+        "lengde": 1314,
+        "beskrivelse": "Danmarksplass - FlÃ¸yfjelltunnelen"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100128,
+        "lengde": 7720,
+        "beskrivelse": "FlÃ¸yfjelltunnelen - Glasskartunnelen"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100131,
+        "lengde": 1652,
+        "beskrivelse": "FlÃ¸yfjelltunnelen - NygÃ¥rdstunnelen"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100130,
+        "lengde": 1314,
+        "beskrivelse": "FlÃ¸yfjelltunnelen - Danmarksplass"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100141,
+        "lengde": 3443,
+        "beskrivelse": "Okstadbakken - Sluppenrampene"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100140,
+        "lengde": 984,
+        "beskrivelse": "Sluppenrampene - Sluppen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100143,
+        "lengde": 3539,
+        "beskrivelse": "Filipstad - BjÃ¸rvika"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100142,
+        "lengde": 3443,
+        "beskrivelse": "Sluppenrampene - Okstadbakken"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100137,
+        "lengde": 2461,
+        "beskrivelse": "Sluppenrampene - Moholt"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100136,
+        "lengde": 5214,
+        "beskrivelse": "Ranheim - Moholt"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100139,
+        "lengde": 1029,
+        "beskrivelse": "Sluppen - Sluppenrampene"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100138,
+        "lengde": 2461,
+        "beskrivelse": "Moholt - Sluppenrampene"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100151,
+        "lengde": 11251,
+        "beskrivelse": "Skedsmovollen - Karihaugen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100146,
+        "lengde": 3539,
+        "beskrivelse": "BjÃ¸rvika - Filipstad"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100156,
+        "lengde": 2359,
+        "beskrivelse": "Harafjelltunnelen Ã¸st - Lyderhorntunnelen"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100157,
+        "lengde": 6176,
+        "beskrivelse": "Forus - AuglendshÃ¸yden"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100158,
+        "lengde": 6176,
+        "beskrivelse": "AuglendshÃ¸yden - Forus"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100159,
+        "lengde": 4991,
+        "beskrivelse": "Holmen - Sandvika"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100152,
+        "lengde": 6879,
+        "beskrivelse": "Karihaugen - Helsfyr"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100153,
+        "lengde": 2359,
+        "beskrivelse": "Lyderhorntunnelen - Harafjelltunnelen Ã¸st"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100103,
+        "lengde": 6346,
+        "beskrivelse": "Klemetsrud - Ryen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100101,
+        "lengde": 4011,
+        "beskrivelse": "Holmen - Asker"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100098,
+        "lengde": 4011,
+        "beskrivelse": "Asker - Holmen"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100097,
+        "lengde": 5925,
+        "beskrivelse": "Filipstad - Helsfyr"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100096,
+        "lengde": 5925,
+        "beskrivelse": "Helsfyr - Filipstad"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100111,
+        "lengde": 3505,
+        "beskrivelse": "SkÃ¸yen - Filipstad"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100110,
+        "lengde": 3400,
+        "beskrivelse": "Lysaker vest - SkÃ¸yen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100109,
+        "lengde": 3400,
+        "beskrivelse": "SkÃ¸yen - Lysaker vest"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100108,
+        "lengde": 3505,
+        "beskrivelse": "Filipstad - SkÃ¸yen"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100104,
+        "lengde": 6346,
+        "beskrivelse": "Ryen - Klemetsrud"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100118,
+        "lengde": 9429,
+        "beskrivelse": "KlÃ¸fta - Jessheim"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100119,
+        "lengde": 9429,
+        "beskrivelse": "Jessheim - KlÃ¸fta"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100116,
+        "lengde": 10904,
+        "beskrivelse": "Skedsmovollen - KlÃ¸fta"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100117,
+        "lengde": 10904,
+        "beskrivelse": "KlÃ¸fta - Skedsmovollen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100114,
+        "lengde": 3404,
+        "beskrivelse": "UllevÃ¥l - Grefsen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100113,
+        "lengde": 3404,
+        "beskrivelse": "Grefsen - UllevÃ¥l"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100124,
+        "lengde": 5286,
+        "beskrivelse": "NygÃ¥rdstunnelen - Lyderhorntunnelen"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100125,
+        "lengde": 5286,
+        "beskrivelse": "Lyderhorntunnelen - NygÃ¥rdstunnelen"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100122,
+        "lengde": 3444,
+        "beskrivelse": "Kristianborg - Hopstunnelen"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100123,
+        "lengde": 3444,
+        "beskrivelse": "Hopstunnelen - Kristianborg"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100120,
+        "lengde": 3631,
+        "beskrivelse": "Danmarksplass - Kristianborg"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100121,
+        "lengde": 3631,
+        "beskrivelse": "Kristianborg - Danmarksplass"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100081,
+        "lengde": 6535,
+        "beskrivelse": "Okstadbakken - Klett"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100080,
+        "lengde": 5787,
+        "beskrivelse": "Studentersamfunnet - Okstadbakken"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100087,
+        "lengde": 6612,
+        "beskrivelse": "Ryen - Filipstad"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100086,
+        "lengde": 6612,
+        "beskrivelse": "Filipstad - Ryen"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100085,
+        "lengde": 9477,
+        "beskrivelse": "Lysaker vest - UllevÃ¥l"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100084,
+        "lengde": 9477,
+        "beskrivelse": "UllevÃ¥l - Lysaker vest"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100073,
+        "lengde": 6535,
+        "beskrivelse": "Klett - Okstadbakken"
+      },
+      {
+        "normalreisetid": 7,
+        "id": 100071,
+        "lengde": 5787,
+        "beskrivelse": "Okstadbakken - Studentersamfunnet"
+      },
+      {
+        "normalreisetid": 9,
+        "id": 100264,
+        "lengde": 10448,
+        "beskrivelse": "SollihÃ¸gda - VÃ¸yenenga"
+      },
+      {
+        "normalreisetid": 9,
+        "id": 100265,
+        "lengde": 10448,
+        "beskrivelse": "VÃ¸yenenga - SollihÃ¸gda"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100260,
+        "lengde": 5823,
+        "beskrivelse": "Klemetsrud - Taraldrud"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100261,
+        "lengde": 6076,
+        "beskrivelse": "Taraldrud - Tusenfryd"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100262,
+        "lengde": 6076,
+        "beskrivelse": "Tusenfryd - Taraldrud"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100263,
+        "lengde": 5823,
+        "beskrivelse": "Taraldrud - Klemetsrud"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100256,
+        "lengde": 4828,
+        "beskrivelse": "Sandvika - VÃ¸yenenga"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100257,
+        "lengde": 4828,
+        "beskrivelse": "VÃ¸yenenga - Sandvika"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100277,
+        "lengde": 1946,
+        "beskrivelse": "Sartor - Knarrevik, Sotra bro vest"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100276,
+        "lengde": 2317,
+        "beskrivelse": "Kolltveittunnelen - Sartor"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100275,
+        "lengde": 2317,
+        "beskrivelse": "Sartor - Kolltveittunnelen"
+      },
+      {
+        "normalreisetid": 2,
+        "id": 100274,
+        "lengde": 1946,
+        "beskrivelse": "Knarrevik, Sotra bro vest - Sartor"
+      },
+      {
+        "normalreisetid": 9,
+        "id": 100238,
+        "lengde": 17296,
+        "beskrivelse": "Riskrysset - Moheim (48) Telemark"
+      },
+      {
+        "normalreisetid": 18,
+        "id": 100239,
+        "lengde": 30802,
+        "beskrivelse": "Moheim (48) Telemark - Ringdal Larvik (44)"
+      },
+      {
+        "normalreisetid": 18,
+        "id": 100236,
+        "lengde": 30802,
+        "beskrivelse": "Ringdal Larvik (44) - Moheim (48) Telemark"
+      },
+      {
+        "normalreisetid": 9,
+        "id": 100237,
+        "lengde": 17296,
+        "beskrivelse": "Moheim (48) Telemark - Riskrysset"
+      },
+      {
+        "normalreisetid": 13,
+        "id": 100234,
+        "lengde": 9620,
+        "beskrivelse": "Riskrysset - DÃ¸rdal"
+      },
+      {
+        "normalreisetid": 13,
+        "id": 100235,
+        "lengde": 9620,
+        "beskrivelse": "DÃ¸rdal - Riskrysset"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100230,
+        "lengde": 2453,
+        "beskrivelse": "Iladalen - Havnegata"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100231,
+        "lengde": 2453,
+        "beskrivelse": "Havnegata - Iladalen"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100228,
+        "lengde": 4760,
+        "beskrivelse": "Sluppen - Iladalen"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100229,
+        "lengde": 4760,
+        "beskrivelse": "Iladalen - Sluppen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100255,
+        "lengde": 3548,
+        "beskrivelse": "LillestrÃ¸mbrua - BlÃ¥kollen"
+      },
+      {
+        "normalreisetid": 3,
+        "id": 100254,
+        "lengde": 3548,
+        "beskrivelse": "BlÃ¥kollen - LillestrÃ¸mbrua"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100253,
+        "lengde": 5579,
+        "beskrivelse": "BlÃ¥kollen - Karihaugen"
+      },
+      {
+        "normalreisetid": 4,
+        "id": 100252,
+        "lengde": 5579,
+        "beskrivelse": "Karihaugen - BlÃ¥kollen"
+      },
+      {
+        "normalreisetid": 6,
+        "id": 100250,
+        "lengde": 5537,
+        "beskrivelse": "Kristianborg - Fanaveien"
+      },
+      {
+        "normalreisetid": 5,
+        "id": 100249,
+        "lengde": 3961,
+        "beskrivelse": "Fanaveien - Birkelandskrysset"
+      },
+      {
+        "normalreisetid": 20,
+        "id": 100247,
+        "lengde": 20244,
+        "beskrivelse": "FokserÃ¸d (41) Torp - TÃ¸nsberg (35)"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100246,
+        "lengde": 9349,
+        "beskrivelse": "Ringdal Larvik (44) - FokserÃ¸d (41) Torp"
+      },
+      {
+        "normalreisetid": 8,
+        "id": 100245,
+        "lengde": 9349,
+        "beskrivelse": "FokserÃ¸d (41) Torp - Ringdal Larvik (44)"
+      },
+      {
+        "normalreisetid": 20,
+        "id": 100244,
+        "lengde": 20244,
+        "beskrivelse": "TÃ¸nsberg (35) - FokserÃ¸d (41) Torp"
+      },
+      {
+        "normalreisetid": 10,
+        "id": 100243,
+        "lengde": 17331,
+        "beskrivelse": "TÃ¸nsberg (35) - Holmestrand syd (31)"
+      },
+      {
+        "normalreisetid": 10,
+        "id": 100242,
+        "lengde": 17331,
+        "beskrivelse": "Holmestrand syd (31) - TÃ¸nsberg (35)"
+      },
+      {
+        "normalreisetid": 18,
+        "id": 100241,
+        "lengde": 29323,
+        "beskrivelse": "Holmestrand syd (31) - Drammen syd"
+      },
+      {
+        "normalreisetid": 18,
+        "id": 100240,
+        "lengde": 29323,
+        "beskrivelse": "Drammen syd - Holmestrand syd (31)"
+      }
+    ],
+    "xsi:schemaLocation": "http://www.reisetider.no/schemas/ReisetidTyper.xsd",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
+  }
+}

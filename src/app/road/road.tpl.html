@@ -1,0 +1,11 @@
+<div class="body">
+    <h1>Road</h1>
+    Intervall : {{realTimeData.intervall.start}} - {{realTimeData.intervall.slutt}}
+
+    <ul>
+        <li ng-repeat="strekning in strekninger">{{strekning.beskrivelse}} ({{strekning.id}}): {{getRealTimeForId(strekning.id)}} {{getLegInfoForId(strekning.id)}}</li>
+    </ul>
+
+
+</div>
+

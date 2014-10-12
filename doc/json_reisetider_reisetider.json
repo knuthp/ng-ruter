@@ -1,0 +1,831 @@
+{
+  "reisetider": {
+    "xmlns": "http://www.reisetider.no",
+    "xmlns:gml": "http://www.opengis.net/gml",
+    "modelldato": "2014.07.08T00:00:00",
+    "xsi:schemaLocation": "http://www.reisetider.no/schemas/ReisetidTyper.xsd",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "intervall": {
+      "start": "2014.10.12T10:05:00",
+      "slutt": "2014.10.12T10:10:00"
+    },
+    "reisetid": [
+      {
+        "strekningid": 100161,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100133,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100208,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100139,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 2
+      },
+      {
+        "strekningid": 100163,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100172,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100128,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100114,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100255,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100264,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 9
+      },
+      {
+        "strekningid": 100073,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100117,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100241,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 18
+      },
+      {
+        "strekningid": 100185,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 7
+      },
+      {
+        "strekningid": 100214,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100171,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100087,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 6
+      },
+      {
+        "strekningid": 100103,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100197,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 8
+      },
+      {
+        "strekningid": 100178,
+        "tendens": "STABIL",
+        "forsinkelse": "LITEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100136,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100153,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100263,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100164,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100221,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 1
+      },
+      {
+        "strekningid": 100192,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 12
+      },
+      {
+        "strekningid": 100158,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100277,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100184,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 6
+      },
+      {
+        "strekningid": 100234,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 13
+      },
+      {
+        "strekningid": 100140,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100122,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100080,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 6
+      },
+      {
+        "strekningid": 100202,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 8
+      },
+      {
+        "strekningid": 100244,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 20
+      },
+      {
+        "strekningid": 100104,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100071,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100081,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 6
+      },
+      {
+        "strekningid": 100262,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100193,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 12
+      },
+      {
+        "strekningid": 100245,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 8
+      },
+      {
+        "strekningid": 100235,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 13
+      },
+      {
+        "strekningid": 100109,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100135,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 4
+      },
+      {
+        "strekningid": 100165,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100130,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100119,
+        "tendens": "STABIL",
+        "forsinkelse": "STOR",
+        "tid": 18
+      },
+      {
+        "strekningid": 100176,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100254,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100137,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100199,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 12
+      },
+      {
+        "strekningid": 100236,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 20
+      },
+      {
+        "strekningid": 100243,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 10
+      },
+      {
+        "strekningid": 100101,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100138,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100166,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100194,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 8
+      },
+      {
+        "strekningid": 100129,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100124,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100183,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 6
+      },
+      {
+        "strekningid": 100110,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100253,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100246,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 8
+      },
+      {
+        "strekningid": 100223,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100261,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100209,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100168,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100173,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100097,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 6
+      },
+      {
+        "strekningid": 100195,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 8
+      },
+      {
+        "strekningid": 100204,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 9
+      },
+      {
+        "strekningid": 100187,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 8
+      },
+      {
+        "strekningid": 100182,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100260,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100274,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100121,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100265,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 9
+      },
+      {
+        "strekningid": 100238,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 9
+      },
+      {
+        "strekningid": 100229,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100196,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 8
+      },
+      {
+        "strekningid": 100098,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100157,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100181,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100146,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100252,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100203,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 9
+      },
+      {
+        "strekningid": 100132,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100160,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100143,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100167,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100084,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 8
+      },
+      {
+        "strekningid": 100113,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100237,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 9
+      },
+      {
+        "strekningid": 100189,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100108,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100249,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100085,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 8
+      },
+      {
+        "strekningid": 100131,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100170,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100230,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100276,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100118,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 6
+      },
+      {
+        "strekningid": 100188,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100123,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100159,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100198,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 12
+      },
+      {
+        "strekningid": 100116,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100086,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 6
+      },
+      {
+        "strekningid": 100141,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100240,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 18
+      },
+      {
+        "strekningid": 100231,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100215,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100134,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100152,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100275,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100151,
+        "tendens": "STABIL",
+        "forsinkelse": "LITEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100096,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 6
+      },
+      {
+        "strekningid": 100257,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100250,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 6
+      },
+      {
+        "strekningid": 100162,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100205,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 8
+      },
+      {
+        "strekningid": 100169,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100142,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100216,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 1
+      },
+      {
+        "strekningid": 100239,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 19
+      },
+      {
+        "strekningid": 100228,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100242,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 10
+      },
+      {
+        "strekningid": 100125,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 5
+      },
+      {
+        "strekningid": 100256,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100247,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 20
+      },
+      {
+        "strekningid": 100120,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 4
+      },
+      {
+        "strekningid": 100222,
+        "tendens": "STABIL",
+        "forsinkelse": "MANGLER",
+        "tid": 5
+      },
+      {
+        "strekningid": 100111,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 3
+      },
+      {
+        "strekningid": 100186,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      },
+      {
+        "strekningid": 100156,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 2
+      },
+      {
+        "strekningid": 100177,
+        "tendens": "STABIL",
+        "forsinkelse": "INGEN",
+        "tid": 7
+      }
+    ]
+  }
+}
