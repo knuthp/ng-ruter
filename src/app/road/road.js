@@ -42,8 +42,12 @@ angular.module( 'ngRuter.road', [
   var delayEnum = ["MANGLER", "STOR", "LITEN", "INGEN"];
   var trendEnum = ["OKENDE", "AVTAGENDE", "STABIL"];
   $scope.paths = [
-    {name: "Asker - Lysaker", edges : [{id : 100098}, {id : 100159}, {id : 100160}]},
-    {name: "Bjorvika - Tusenfryd", edges : [{id: 100202}, {id : 100203}]}
+    {name : "Asker - Lysaker",    edges : [{id : 100098}, {id : 100159}, {id : 100160}]},
+    {name : "Bjørvika - Lysaker", edges : [{id : 100146}, {id : 100108}, {id : 100109}]},
+    {name : "Grefsen - Lysaker",  edges : [{id : 100113}, {id : 100084}]}, 
+    {name : "Lysaker - Asker",    edges : [{id : 100161}, {id : 100162}, {id : 100101}]},
+    {name : "Lysaker - Bjørvika", edges : [{id : 100110}, {id : 100111}, {id : 100143}]},
+    {name : "Lysaker - Grefsen",  edges : [{id : 100085}, {id : 100114}]}
   ];
 
   $scope.getRealTimeForEdgeId = function(id) {
