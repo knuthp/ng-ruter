@@ -83,6 +83,25 @@ angular.module( 'ngRuter.home', [
     };
  })
 
+
+.factory('stationModel', function() {
+  var service = {
+    getStations : getStations
+  };
+  return service;
+
+  function getStations() {
+    return [
+      {id : "3012550", name : "Lysaker [tog]", stopType : "Train"},
+      {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)", stopType : "Bus"},
+      {id : "3012552", name : "Lysaker stasjon (sydside Dr.vn)", stopType : "Bus"},
+      {id : "2200500", name : "Asker [tog]", stopType : "Train"},
+      {id : "2200440", name : "Aspelund", stopType : "Bus"} 
+    ];
+  }
+})
+
+
 /**
  * And of course we define a controller for our route.
  */
@@ -93,15 +112,9 @@ angular.module( 'ngRuter.home', [
 /**
  * Controller for real time info.
  */
-.controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout ) {
+.controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout, stationModel ) {
   $scope.realTimeData = [];
-  $scope.stations = [
-    {id : "3012550", name : "Lysaker [tog]", stopType : "Train"},
-    {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)", stopType : "Bus"},
-    {id : "3012552", name : "Lysaker stasjon (sydside Dr.vn)", stopType : "Bus"},
-    {id : "2200500", name : "Asker [tog]", stopType : "Train"},
-    {id : "2200440", name : "Aspelund", stopType : "Bus"} 
-  ];
+  $scope.stations = stationModel.getStations();
   $scope.currentStation = $scope.stations[0];
 
 $scope.toggled = function(open) {
