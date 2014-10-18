@@ -95,8 +95,9 @@ angular.module( 'ngRuter.home', [
       {id : "3012550", name : "Lysaker [tog]", stopType : "Train"},
       {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)", stopType : "Bus"},
       {id : "3012552", name : "Lysaker stasjon (sydside Dr.vn)", stopType : "Bus"},
-      {id : "2200500", name : "Asker [tog]", stopType : "Train"},
-      {id : "2200440", name : "Aspelund", stopType : "Bus"} 
+      {id : "2190001", name : "Lysaker [båt]", stopType : "Boat"}
+      // {id : "2200500", name : "Asker [tog]", stopType : "Train"},
+      // {id : "2200440", name : "Aspelund", stopType : "Bus"} 
     ];
   }
 })
@@ -114,8 +115,8 @@ angular.module( 'ngRuter.home', [
           .success(function(data) {
               _.each(data, function(element, index, list) {
                 element.stopType = station.stopType;
-                deferred.resolve({ data : data, updateTime : new Date()});
               });
+              deferred.resolve({ data : data, updateTime : new Date()});
           });
     return deferred.promise;
   }
