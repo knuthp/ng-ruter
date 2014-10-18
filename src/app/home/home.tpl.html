@@ -2,11 +2,23 @@
     <div ng-controller="myBusStopCtrl" class="table-responsive" style="max-width:800px;">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2>Station info: <select ng-model="currentStation" ng-options="station.name for station in stations" ng-change="getRealTimeData()"></select></h2> 
+                <h2>Station info: Lysaker</h2> 
                 
             </div>
             <div class="panel-body table-responsive">
-                UpdateTime: {{updateTime | hourMinutesSeconds}}
+                <table width="100%">
+                <tr>
+                    <td><h3>Filter: 
+                        <div class="btn-group">
+                            <label class="btn btn-primary" ng-model="typeModel.Train" btn-checkbox>Train</label>
+                            <label class="btn btn-primary" ng-model="typeModel.Bus" btn-checkbox>Bus</label>
+                            <label class="btn btn-primary" ng-model="typeModel.Boat" btn-checkbox>Boat</label>
+                        </div>
+                    </h3>
+                    </td>
+                    <td class="text-right">UpdateTime: {{updateTime | hourMinutesSeconds}}</td> 
+                </tr>
+            </table>
             </div>
             <table class="table table-striped" ng-show="realTimeData.length > 0">
                 <thead>
@@ -22,7 +34,7 @@
                 </thead>
                 <tbody>
                     <div >
-                        <tr ng-repeat="item in realTimeData" ng-class="getRowClass(item)">
+                        <tr ng-repeat="item in realTimeData | filter:rtFilter" ng-class="getRowClass(item)">
                             <th><span class="label label-default" ng-class="getRowClassBadge(item)">{{item.stopType}}</span></th>
                             <td>{{item.PublishedLineName}}</td>
                             <td>{{item.AimedDepartureTime | hourMinutes}}</td>

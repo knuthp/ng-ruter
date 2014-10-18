@@ -167,7 +167,7 @@ angular.module( 'ngRuter.home', [
   $scope.stations = stationModel.getStations();
   $scope.currentStation = $scope.stations[0];
 
-$scope.toggled = function(open) {
+  $scope.toggled = function(open) {
     console.log('Dropdown is now: ', open);
   };
 
@@ -176,6 +176,10 @@ $scope.toggled = function(open) {
     $scope.getRealTimeData();
   };
 
+  $scope.typeModel = {};
+  $scope.rtFilter = function(elem) {
+    return !$scope.typeModel[elem.stopType];
+  };
 
   $scope.updateTime = null;
 
