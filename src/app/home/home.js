@@ -101,6 +101,55 @@ angular.module( 'ngRuter.home', [
   }
 })
 
+.factory('realTimeStation', function($http, $q) {
+  var service = {
+    getForStop : getForStop,
+    getForStops : getForStops
+  };
+  return service;
+
+  function getForStop(station) {
+    var deferred = $q.defer();
+    $http.jsonp(getStationUrl(station.id))
+          .success(function(data) {
+              _.each(data, function(element, index, list) {
+                element.stopType = station.stopType;
+                deferred.resolve({ data : data, updateTime : new Date()});
+              });
+          });
+    return deferred.promise;
+  }
+
+  function getForStops(stations) {
+    var deferred = $q.defer();
+    var urlCalls = [];
+    var realTimeData = {};
+    angular.forEach(stations, function(station) {
+      urlCalls.push(getForStop(station));
+    });
+    $q.all(urlCalls)
+      .then(function(results) {
+          var ret = { data : _.sortBy(_.flatten(_.pluck(results, 'data')), 'AimedDepartureTime'), updateTime : new Date()};
+          deferred.resolve(
+            ret
+        );
+      },
+      function (errors) {
+        console.log("Error");
+      },  function(updates) {
+        console.log("Updates" + JSON.stringify(updates));
+      });
+    return deferred.promise;
+  }
+
+
+  function getStationUrl(id) {
+    return "http://reis.trafikanten.no/reisrest/realtime/getrealtimedata/" + id + "?callback=JSON_CALLBACK";
+  }
+
+
+
+})
 
 /**
  * And of course we define a controller for our route.
@@ -112,7 +161,7 @@ angular.module( 'ngRuter.home', [
 /**
  * Controller for real time info.
  */
-.controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout, stationModel ) {
+.controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout, stationModel, realTimeStation ) {
   $scope.realTimeData = [];
   $scope.stations = stationModel.getStations();
   $scope.currentStation = $scope.stations[0];
@@ -129,9 +178,6 @@ $scope.toggled = function(open) {
 
   $scope.updateTime = null;
 
-  getStationUrl = function(id) {
-    return "http://reis.trafikanten.no/reisrest/realtime/getrealtimedata/" + id + "?callback=JSON_CALLBACK";
-  };
 
   $scope.getRowClass = function(item) {
     var delay = moment.duration(item.Delay);
@@ -150,14 +196,12 @@ $scope.toggled = function(open) {
   };
 
   $scope.getRealTimeData =  function () {
-    $http.jsonp(getStationUrl($scope.currentStation.id))
-          .success(function(data){
-              _.each(data, function(element, index, list) {
-                element.stopType = $scope.currentStation.stopType;
-              });
-              $scope.realTimeData = data;
-              $scope.updateTime = new Date();
-          });
+    // var promise = realTimeStation.getForStop($scope.currentStation);
+    var promise = realTimeStation.getForStops($scope.stations);
+    promise.then(function(payload) {
+      $scope.realTimeData = payload.data;
+      $scope.updateTime = payload.updateTime;
+    });
   };
 
   var interval = 5000;
