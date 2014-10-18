@@ -200,6 +200,11 @@ angular.module( 'ngRuter.home', [
     return "label-" + $scope.getRowClass(item);
   };
 
+  $scope.getRowImage = function(item) {
+    var map = {Train : "assets/icons/train20.svg", Bus : "assets/icons/front15.svg", Boat : "assets/icons/ship12.svg"};
+    return map[item.stopType];
+  };
+
   $scope.getRealTimeData =  function () {
     // var promise = realTimeStation.getForStop($scope.currentStation);
     var promise = realTimeStation.getForStops($scope.stations);

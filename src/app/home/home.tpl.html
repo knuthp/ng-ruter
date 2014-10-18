@@ -3,16 +3,15 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h2>Station info: Lysaker</h2> 
-                
             </div>
             <div class="panel-body table-responsive">
                 <table width="100%">
                 <tr>
                     <td><h3>Filter: 
                         <div class="btn-group">
-                            <label class="btn btn-primary" ng-model="typeModel.Train" btn-checkbox>Train</label>
-                            <label class="btn btn-primary" ng-model="typeModel.Bus" btn-checkbox>Bus</label>
-                            <label class="btn btn-primary" ng-model="typeModel.Boat" btn-checkbox>Boat</label>
+                            <label class="btn btn-primary" ng-model="typeModel.Train" btn-checkbox><img src="assets/icons/train20.svg" width="20px" height="20px"></label>
+                            <label class="btn btn-primary" ng-model="typeModel.Bus" btn-checkbox><img src="assets/icons/front15.svg" width="20px" height="20px"></label>
+                            <label class="btn btn-primary" ng-model="typeModel.Boat" btn-checkbox><img src="assets/icons/ship12.svg" width="20px" height="20px"></label>
                         </div>
                     </h3>
                     </td>
@@ -35,7 +34,7 @@
                 <tbody>
                     <div >
                         <tr ng-repeat="item in realTimeData | filter:rtFilter" ng-class="getRowClass(item)">
-                            <th><span class="label label-default" ng-class="getRowClassBadge(item)">{{item.stopType}}</span></th>
+                            <th><img ng-src="{{getRowImage(item)}}" width="25px" height="25px"></img></th>
                             <td>{{item.PublishedLineName}}</td>
                             <td>{{item.AimedDepartureTime | hourMinutes}}</td>
                             <td>{{item.DestinationName}}</td>
@@ -50,5 +49,6 @@
             </table>
         </div>
     </div>
+    <div>Icons made by Freepik, Google from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>         is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
 </div>
 
