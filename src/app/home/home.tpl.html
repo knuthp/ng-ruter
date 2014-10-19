@@ -15,9 +15,13 @@
                         </div>
                     </h3>
                     </td>
-                    <td class="text-right">UpdateTime: {{updateTime | hourMinutesSeconds}}</td> 
+                    <td class="text-right">UpdateTime: {{updateTime | hourMinutesSeconds}} ({{interval.seconds}})</td> 
                 </tr>
             </table>
+            <div ng-controller="SettingsCtrl">
+                {{interval.seconds}}
+                <input type="range" ng-model="interval.seconds" min="1" max="400" />
+            </div>
             </div>
             <table class="table table-striped" ng-show="realTimeData.length > 0">
                 <thead>

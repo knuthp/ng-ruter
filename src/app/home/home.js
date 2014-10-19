@@ -84,6 +84,25 @@ angular.module( 'ngRuter.home', [
  })
 
 
+/**
+ * Model for stations to get real-time info for.
+ */
+.factory('realTimeSettings', function() {
+  var service = {
+      getRefreshInterval : getRefreshInterval
+  };
+  var refreshInterval = {seconds : 10};
+  
+  return service;
+  
+  function getRefreshInterval() {
+    return refreshInterval;
+  }
+})
+
+/**
+ * Model for stations to get real-time info for.
+ */
 .factory('stationModel', function() {
   var service = {
     getStations : getStations
@@ -102,6 +121,10 @@ angular.module( 'ngRuter.home', [
   }
 })
 
+
+/**
+ * Model for real-time data related to stations
+ */
 .factory('realTimeStation', function($http, $q) {
   var service = {
     getForStop : getForStop,
@@ -147,9 +170,6 @@ angular.module( 'ngRuter.home', [
   function getStationUrl(id) {
     return "http://reis.trafikanten.no/reisrest/realtime/getrealtimedata/" + id + "?callback=JSON_CALLBACK";
   }
-
-
-
 })
 
 /**
@@ -162,10 +182,9 @@ angular.module( 'ngRuter.home', [
 /**
  * Controller for real time info.
  */
-.controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout, stationModel, realTimeStation ) {
+.controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout, stationModel, realTimeStation, realTimeSettings ) {
   $scope.realTimeData = [];
   $scope.stations = stationModel.getStations();
-  $scope.currentStation = $scope.stations[0];
 
   $scope.toggled = function(open) {
     console.log('Dropdown is now: ', open);
@@ -196,17 +215,12 @@ angular.module( 'ngRuter.home', [
   };
 
 
-  $scope.getRowClassBadge = function(item) {
-    return "label-" + $scope.getRowClass(item);
-  };
-
   $scope.getRowImage = function(item) {
     var map = {Train : "assets/icons/train20.svg", Bus : "assets/icons/front15.svg", Boat : "assets/icons/ship12.svg"};
     return map[item.stopType];
   };
 
   $scope.getRealTimeData =  function () {
-    // var promise = realTimeStation.getForStop($scope.currentStation);
     var promise = realTimeStation.getForStops($scope.stations);
     promise.then(function(payload) {
       $scope.realTimeData = payload.data;
@@ -214,13 +228,14 @@ angular.module( 'ngRuter.home', [
     });
   };
 
-  var interval = 5000;
+  $scope.interval = realTimeSettings.getRefreshInterval();
   function countUp() {
-          $scope.getRealTimeData();
-          $timeout(countUp, interval);
+    $scope.getRealTimeData();
+    $scope.interval = realTimeSettings.getRefreshInterval();
+    $timeout(countUp, $scope.interval.seconds * 1000);
   }
 
-  $timeout(countUp, interval);
+  $timeout(countUp, $scope.interval.seconds * 1000);
   $scope.getRealTimeData();
 
 
@@ -241,7 +256,13 @@ angular.module( 'ngRuter.home', [
     }
     return retText;
   };
+})
 
+/**
+ * And of course we define a controller for our route.
+ */
+.controller( 'SettingsCtrl', function SettingsController( $scope, realTimeSettings) {
+  $scope.interval = realTimeSettings.getRefreshInterval();
 })
 
 ; 
