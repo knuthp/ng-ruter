@@ -13,7 +13,8 @@
  * specified, as shown below.
  */
 angular.module( 'ngRuter.home', [
-  'ui.router'
+  'ui.router',
+  'LocalStorageModule'
 ])
 
 /**
@@ -103,7 +104,7 @@ angular.module( 'ngRuter.home', [
 /**
  * Model for stations to get real-time info for.
  */
-.factory('stationModel', function() {
+.factory('stationModel', function(localStorageService) {
   var stationList = [{id : 1, name : "Lysaker", stations : [
       {id : "3012550", name : "Lysaker [tog]", stopType : "Train"},
       {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)", stopType : "Bus"},
@@ -128,11 +129,17 @@ angular.module( 'ngRuter.home', [
   }
 
   function getCurrentStation() {
-    return currentStation;
+    var localStorageStation = localStorageService.get('currentStation');
+    if (localStorageStation) {
+      return localStorageStation;
+    } else {
+      return currentStation;
+    }
   }
 
   function setCurrentStation(station) {
     currentStation = station;
+    localStorageService.set('currentStation', station);
   }
 
   function getStationList() {

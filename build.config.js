@@ -68,7 +68,8 @@ module.exports = {
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
       'vendor/moment/moment.js',
-      'vendor/underscore/underscore-min.js'
+      'vendor/underscore/underscore-min.js',
+      'vendor/angular-local-storage/dist/angular-local-storage.min.js'
 
     ],
     css: [
