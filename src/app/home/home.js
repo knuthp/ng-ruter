@@ -91,7 +91,7 @@ angular.module( 'ngRuter.home', [
   var service = {
       getRefreshInterval : getRefreshInterval
   };
-  var refreshInterval = {seconds : 10};
+  var refreshInterval = {seconds : 5};
   
   return service;
   
@@ -104,21 +104,41 @@ angular.module( 'ngRuter.home', [
  * Model for stations to get real-time info for.
  */
 .factory('stationModel', function() {
+  var stationList = [{id : 1, name : "Lysaker", stations : [
+      {id : "3012550", name : "Lysaker [tog]", stopType : "Train"},
+      {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)", stopType : "Bus"},
+      {id : "3012552", name : "Lysaker stasjon (sydside Dr.vn)", stopType : "Bus"},
+      {id : "2190001", name : "Lysaker [båt]", stopType : "Boat"} 
+    ]}, {id : 2, name : "Asker", stations : [
+      {id : "2200500", name : "Asker [tog]", stopType : "Train"},
+      {id : "2200440", name : "Aspelund", stopType : "Bus"}]
+    }];
+  var currentStation = stationList[1];
   var service = {
-    getStations : getStations
+    getStations : getStations,
+    getCurrentStation : getCurrentStation,
+    setCurrentStation : setCurrentStation,
+    getStationList : getStationList
+
   };
   return service;
 
   function getStations() {
-    return [
-      {id : "3012550", name : "Lysaker [tog]", stopType : "Train"},
-      {id : "3012551", name : "Lysaker stasjon (nordside Dr.vn)", stopType : "Bus"},
-      {id : "3012552", name : "Lysaker stasjon (sydside Dr.vn)", stopType : "Bus"},
-      {id : "2190001", name : "Lysaker [båt]", stopType : "Boat"}
-      // {id : "2200500", name : "Asker [tog]", stopType : "Train"},
-      // {id : "2200440", name : "Aspelund", stopType : "Bus"} 
-    ];
+    return currentStation;
   }
+
+  function getCurrentStation() {
+    return currentStation;
+  }
+
+  function setCurrentStation(station) {
+    currentStation = station;
+  }
+
+  function getStationList() {
+    return stationList;
+  }
+
 })
 
 
@@ -184,16 +204,6 @@ angular.module( 'ngRuter.home', [
  */
 .controller( 'myBusStopCtrl', function myBusStopCtrl( $scope, $http, $timeout, stationModel, realTimeStation, realTimeSettings ) {
   $scope.realTimeData = [];
-  $scope.stations = stationModel.getStations();
-
-  $scope.toggled = function(open) {
-    console.log('Dropdown is now: ', open);
-  };
-
-  $scope.changeStation = function() {
-    $scope.realTimeData = [];
-    $scope.getRealTimeData();
-  };
 
   $scope.typeModel = {};
   $scope.rtFilter = function(elem) {
@@ -221,7 +231,8 @@ angular.module( 'ngRuter.home', [
   };
 
   $scope.getRealTimeData =  function () {
-    var promise = realTimeStation.getForStops($scope.stations);
+    var currentStation = stationModel.getCurrentStation();
+    var promise = realTimeStation.getForStops(currentStation.stations);
     promise.then(function(payload) {
       $scope.realTimeData = payload.data;
       $scope.updateTime = payload.updateTime;
@@ -261,8 +272,15 @@ angular.module( 'ngRuter.home', [
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'SettingsCtrl', function SettingsController( $scope, realTimeSettings) {
+.controller( 'SettingsCtrl', function SettingsController( $scope, realTimeSettings, stationModel) {
   $scope.interval = realTimeSettings.getRefreshInterval();
+  $scope.currentStation = stationModel.getCurrentStation();
+  $scope.stationList = stationModel.getStationList();
+
+  $scope.setCurrentStation = function(station) {
+    $scope.currentStation = station;
+    stationModel.setCurrentStation(station);
+  };
 })
 
 ; 

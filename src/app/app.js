@@ -4,6 +4,7 @@ angular.module( 'ngRuter', [
   'ngRuter.home',
   'ngRuter.road',
   'ngRuter.about',
+  'ngRuter.settings',
   'ui.router'
 ])
 

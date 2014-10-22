@@ -1,27 +1,38 @@
 <div class="body">
     <div ng-controller="myBusStopCtrl" class="table-responsive" style="max-width:800px;">
         <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>Station info: Lysaker</h2> 
-            </div>
-            <div class="panel-body table-responsive">
-                <table width="100%">
-                <tr>
-                    <td><h3>Filter: 
-                        <div class="btn-group">
-                            <label class="btn btn-primary" ng-model="typeModel.Train" btn-checkbox><img src="assets/icons/train20.svg" width="20px" height="20px"></label>
-                            <label class="btn btn-primary" ng-model="typeModel.Bus" btn-checkbox><img src="assets/icons/front15.svg" width="20px" height="20px"></label>
-                            <label class="btn btn-primary" ng-model="typeModel.Boat" btn-checkbox><img src="assets/icons/ship12.svg" width="20px" height="20px"></label>
-                        </div>
-                    </h3>
-                    </td>
-                    <td class="text-right">UpdateTime: {{updateTime | hourMinutesSeconds}} ({{interval.seconds}})</td> 
-                </tr>
-            </table>
             <div ng-controller="SettingsCtrl">
-                {{interval.seconds}}
-                <input type="range" ng-model="interval.seconds" min="1" max="400" />
-            </div>
+                <div class="panel-heading">
+                    <h2>Station info: Lysaker</h2> 
+                </div>
+                <div class="panel-body table-responsive">
+                    <table width="100%">
+                    <tr>
+                        <td><h3>Filter: 
+                            <!-- Area button -->
+                            <div class="btn-group" dropdown>
+                              <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+                                {{currentStation.name}} <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="station in stationList">
+                                    <a ng-click="setCurrentStation(station)">{{station.name}}</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="btn-group">
+                                <label class="btn btn-primary" ng-model="typeModel.Train" btn-checkbox><img src="assets/icons/train20.svg" width="20px" height="20px"></label>
+                                <label class="btn btn-primary" ng-model="typeModel.Bus" btn-checkbox><img src="assets/icons/front15.svg" width="20px" height="20px"></label>
+                                <label class="btn btn-primary" ng-model="typeModel.Boat" btn-checkbox><img src="assets/icons/ship12.svg" width="20px" height="20px"></label>
+                            </div>
+                        </h3>
+                        </td>
+                        <td class="text-right">UpdateTime: {{updateTime | hourMinutesSeconds}} ({{interval.seconds}})</td> 
+                    </tr>
+                </table>
+                    {{interval.seconds}}
+                    <input type="range" ng-model="interval.seconds" min="1" max="60" />
+                </div>
             </div>
             <table class="table table-striped" ng-show="realTimeData.length > 0">
                 <thead>
