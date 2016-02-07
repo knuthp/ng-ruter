@@ -1,14 +1,10 @@
 <div class="body">
-    <h1>Road</h1>
-    Intervall : {{realTimeData.intervall.start}} - {{realTimeData.intervall.slutt}}
-
+    <h1>Road 2</h1>
+    
     <ul>
-        <li ng-repeat="path in paths">{{path.name}} {{getNormalTravelTimeForPath(path)}} min RT: {{getDelayForPath(path)}} {{getTrendForPath(path)}} {{getRealTimeTravelTimeForPath(path)}} min 
-            <ul>
-                <li ng-repeat="edge in path.edges">{{getInfoForEdgeId(edge.id).beskrivelse}} : {{getInfoForEdgeId(edge.id).normalreisetid}} min RT: {{getRealTimeForEdgeId(edge.id).forsinkelse}} {{getRealTimeForEdgeId(edge.id).tendens}}  {{getRealTimeForEdgeId(edge.id).tid}}</li>
-            </ul>
+        <li ng-repeat="route in realTimeData"> {{route.name}} : {{route.travelTime}} ({{route.freeFlowTime}}) delay : {{getDelaySeconds(route) | isoInterval}}
         </li>
-    </ul>
+    </ul> 
 
     <table>
     	<thead>
@@ -21,3 +17,4 @@
 
 </div>
 
+ 

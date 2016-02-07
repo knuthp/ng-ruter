@@ -34,94 +34,38 @@ angular.module( 'ngRuter.road', [
   });
 })
 
+ .filter('isoInterval', function() {
+    return function(isoInterval) {
+      var delay = moment.duration(isoInterval, 'seconds');
+      if (delay.asSeconds() === 0) {
+        return "none";
+      } else {
+        return delay.humanize();
+      }
+    };
+ }) 
+
 
 /**
  * And of course we define a controller for our route.
  */
 .controller( 'RoadCtrl', function RoadController( $scope, $http ) {
-  var delayEnum = ["MANGLER", "STOR", "LITEN", "INGEN"];
-  var trendEnum = ["OKENDE", "AVTAGENDE", "STABIL"];
-  $scope.paths = [
-    {name : "Asker - Lysaker",    edges : [{id : 100098}, {id : 100159}, {id : 100160}]},
-    {name : "Bjørvika - Lysaker", edges : [{id : 100146}, {id : 100108}, {id : 100109}]},
-    {name : "Grefsen - Lysaker",  edges : [{id : 100113}, {id : 100084}]}, 
-    {name : "Lysaker - Asker",    edges : [{id : 100161}, {id : 100162}, {id : 100101}]},
-    {name : "Lysaker - Bjørvika", edges : [{id : 100110}, {id : 100111}, {id : 100143}]},
-    {name : "Lysaker - Grefsen",  edges : [{id : 100085}, {id : 100114}]}
-  ];
-
-  $scope.getRealTimeForEdgeId = function(id) {
-    return _.find($scope.realTimeData.reisetid, function(elem) {
-      return elem.strekningid == id;
-    }); 
-  };
-
-  $scope.getInfoForEdgeId = function(id) {
-    return _.find($scope.edges.strekning, function(elem) {
-      return elem.id == id;
-    }); 
-  };
-
-  $scope.getDelayForPath = function(path) {
-    var ret = delayEnum.length;
-    if ($scope.realTimeData.reisetid) {
-      _.each(path.edges, function(elem, index, list) {
-        ret = Math.min(ret, delayEnum.indexOf($scope.getRealTimeForEdgeId(elem.id).forsinkelse));
-      });
-    }
-    return delayEnum[ret];
-  };
-
-  $scope.getTrendForPath = function(path) {
-    var ret = trendEnum.length;
-    if ($scope.realTimeData.reisetid) {
-      _.each(path.edges, function(elem, index, list) {
-        ret = Math.min(ret, trendEnum.indexOf($scope.getRealTimeForEdgeId(elem.id).tendens));
-      });
-    }
-    return trendEnum[ret];
-  };
-
-  $scope.getNormalTravelTimeForPath = function(path) {
-    var ret = 0;
-    if ($scope.edges && $scope.edges.strekning.length > 0) {
-      _.each(path.edges, function(elem, index, list) {
-        ret += $scope.getInfoForEdgeId(elem.id).normalreisetid;
-      });
-    }
-    return ret;
-  };
-
-  $scope.getRealTimeTravelTimeForPath = function(path) {
-    var ret = 0;
-    if ($scope.realTimeData.reisetid) {
-      _.each(path.edges, function(elem, index, list) {
-        ret += $scope.getRealTimeForEdgeId(elem.id).tid;
-      });
-    }
-    return ret;
-  };
-
-
   $scope.realTimeData = [];
   $scope.getRealTimeData =  function () {
-    $http.get("http://rest-translator.herokuapp.com/reisetider/reisetider")
+    $http.get("https://spartid-server.herokuapp.com/routetimes/") 
       .success(function(data){
-        $scope.realTimeData = data.reisetider;
+        $scope.realTimeData = data;
       });
   };
 
-  $scope.edges = [];
-  $scope.getEdges = function() {
-    $http.get("http://rest-translator.herokuapp.com/reisetider/strekninger")
-      .success(function(data){
-        $scope.edges = data.reisetider;
-      });    
+  $scope.getDelaySeconds = function(route) {
+    return route.travelTime - route.freeFlowTime;
   };
 
+
+
   $scope.getRealTimeData();
-  $scope.getEdges();
-})
+}) 
 
 ; 
 
