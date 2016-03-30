@@ -1,20 +1,36 @@
 <div class="body">
-    <h1>Road 2</h1>
-    
-    <ul>
-        <li ng-repeat="route in realTimeData"> {{route.name}} : {{route.travelTime}} ({{route.freeFlowTime}}) delay : {{getDelaySeconds(route) | isoInterval}}
-        </li>
-    </ul> 
-
-    <table>
-    	<thead>
-    		<tr><th>A</th><th>B</th></tr>
-    	</thead>
-    	<tbody>
-    		<tr><td>1</td><td>2</td></tr>
-    	</tbody>
+    <div class="container">
+    <h1>Road Routes</h1> 
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="3" style="text-align:center">VEGVESEN</th>
+                <th colspan="3" style="text-align:center">GOOGLE</th> 
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>FreeFlow</th>
+                <th>TravelTime</th>
+                <th>Delay</th>
+                <th>FreeFlow</th>
+                <th>TravelTime</th>
+                <th>Delay</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="route in realTimeData"> 
+                <td>{{route.name}}</td>
+                <td>{{route.providerData.VEGVESEN.travelTime | minSecInterval}}</td>
+                <td>{{route.providerData.VEGVESEN.freeFlowTime | minSecInterval}}</td>
+                <td>{{getDelaySeconds(route.providerData.VEGVESEN) | isoInterval}}</td>
+                <td>{{route.providerData.GOOGLE.travelTime | minSecInterval}}</td>
+                <td>{{route.providerData.GOOGLE.freeFlowTime | minSecInterval}}</td>
+                <td>{{getDelaySeconds(route.providerData.GOOGLE) | isoInterval}}</td>
+            </tr>
+        </tbody>
     </table>
-
+    </div>
 </div>
 
  

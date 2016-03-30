@@ -36,12 +36,24 @@ angular.module( 'ngRuter.road', [
 
  .filter('isoInterval', function() {
     return function(isoInterval) {
+      if (isoInterval == null) { 
+        return "";
+      }      
       var delay = moment.duration(isoInterval, 'seconds');
       if (delay.asSeconds() === 0) {
         return "none";
       } else {
         return delay.humanize();
       }
+    };
+ })
+ .filter('minSecInterval', function() {
+    return function(interval) {
+      if (interval == null) { 
+        return "";
+      }
+      var duration = moment.duration(interval, 'seconds');
+      return duration.minutes() + ":" + duration.seconds();
     };
  }) 
 
@@ -58,8 +70,11 @@ angular.module( 'ngRuter.road', [
       });
   };
 
-  $scope.getDelaySeconds = function(route) {
-    return route.travelTime - route.freeFlowTime;
+  $scope.getDelaySeconds = function(routeProviderData) {
+    if (routeProviderData == null) {
+      return null;
+    }
+    return routeProviderData.travelTime - routeProviderData.freeFlowTime;
   };
 
 
