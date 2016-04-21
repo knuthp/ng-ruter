@@ -21,11 +21,11 @@
         <tbody>
             <tr ng-repeat="route in realTimeData"> 
                 <td>{{route.name}}</td>
-                <td>{{route.providerData.VEGVESEN.travelTime | minSecInterval}}</td>
                 <td>{{route.providerData.VEGVESEN.freeFlowTime | minSecInterval}}</td>
+                <td>{{route.providerData.VEGVESEN.travelTime | minSecInterval}}</td>
                 <td>{{getDelaySeconds(route.providerData.VEGVESEN) | isoInterval}}</td>
-                <td>{{route.providerData.GOOGLE.travelTime | minSecInterval}}</td>
                 <td>{{route.providerData.GOOGLE.freeFlowTime | minSecInterval}}</td>
+                <td>{{route.providerData.GOOGLE.travelTime | minSecInterval}}</td>
                 <td>{{getDelaySeconds(route.providerData.GOOGLE) | isoInterval}}</td>
             </tr>
         </tbody>
